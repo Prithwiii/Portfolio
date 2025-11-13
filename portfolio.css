@@ -1,11 +1,21 @@
+/* ------------------- GENERAL STYLING ------------------- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
 body{
     height: 90vh;
     margin:0;
     background-image: linear-gradient(to right, lightblue, lightpink);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
+/* ------------------- HERO SECTION ------------------- */
 .hero {
     position: relative;
     width: 100%;
@@ -18,7 +28,8 @@ body{
 }
 
 .floating-image{
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     z-index: 1;
     border-radius: 20px;
@@ -40,16 +51,15 @@ body{
 .floating-text1{
     font-size: 80px;
     font-weight: bold;
-    color:  black;
+    color: black;
     margin:0;
 }
 
 .button-container{
-    position: relative;
-    right: 20px;
-    top:20px;
     display: flex;
     column-gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .button-container button{
@@ -67,7 +77,7 @@ body{
     background-color: #3a0fba;
 }
 
-/* Contact Page Styling */
+/* ------------------- CONTACT PAGE ------------------- */
 .contact-page {
     height: 100vh;
     margin: 0;
@@ -79,9 +89,11 @@ body{
 }
 
 .contact-container {
+    width: 100%;
+    max-width: 600px;
     text-align: center;
     background: rgba(255, 255, 255, 0.3);
-    padding: 40px 60px;
+    padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -138,7 +150,7 @@ body{
     transform: scale(1.05);
 }
 
-/* About Page Styling */
+/* ------------------- ABOUT PAGE ------------------- */
 .about-page {
     height: 100vh;
     margin: 0;
@@ -151,10 +163,11 @@ body{
 }
 
 .about-container {
+    width: 100%;
     max-width: 700px;
     text-align: center;
     background: rgba(255, 255, 255, 0.3);
-    padding: 40px 60px;
+    padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -178,7 +191,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 25px;
+    flex-wrap: wrap;
 }
 
 .about-link {
@@ -195,7 +208,7 @@ body{
     transform: scale(1.05);
 }
 
-/* PROJECTS PAGE STYLING */
+/* ------------------- PROJECTS PAGE ------------------- */
 .projects-page {
     min-height: 100vh;
     margin: 0;
@@ -209,10 +222,10 @@ body{
 }
 
 .projects-container {
+    width: 100%;
     max-width: 850px;
-    width: 90%;
     background: rgba(255, 255, 255, 0.3);
-    padding: 40px 50px;
+    padding: 40px 30px;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     backdrop-filter: blur(10px);
@@ -247,85 +260,17 @@ body{
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.project-steps {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 20px 0;
-    color: #222;
-    font-size: 18px;
-}
-
-.project-steps li {
-    margin: 8px 0;
-}
-
-.results-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-.results-table th, .results-table td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-}
-
-.results-table th {
-    background-color: rgba(58, 15, 186, 0.1);
-    color: #14025f;
-}
-
-.insights h3 {
-    color: #3a0fba;
-    margin-bottom: 10px;
-}
-
-.insights ul {
-    list-style-type: disc;
-    margin-left: 25px;
-    color: #222;
-    font-size: 17px;
-}
-
-.project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.project-link {
-    text-decoration: none;
-    font-weight: 600;
-    color: #14025f;
-    transition: all 0.3s ease;
-}
-
-.project-link:hover {
-    color: #3a0fba;
-    text-shadow: 0 0 8px rgba(58, 15, 186, 0.7);
-    transform: scale(1.05);
-}
-
-.more-projects {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 18px;
-    color: #14025f;
-}
-
-/* EXPERIENCE PAGE */
+/* ------------------- EXPERIENCE PAGE ------------------- */
 .experience-body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     background-image: linear-gradient(to right, lightblue, lightpink);
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: #14025f;
 }
 
 .experience-container {
+    width: 100%;
     max-width: 900px;
     margin: 100px auto;
     padding: 30px;
@@ -371,7 +316,7 @@ body{
     font-size: 17px;
 }
 
-/* CERTIFICATES PAGE */
+/* ------------------- CERTIFICATES PAGE ------------------- */
 .certificates-page {
     min-height: 100vh;
     margin: 0;
@@ -383,21 +328,14 @@ body{
 }
 
 .certificates-container {
+    width: 100%;
     max-width: 900px;
-    width: 90%;
     background: rgba(255, 255, 255, 0.3);
-    padding: 50px 60px;
+    padding: 50px 30px;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     backdrop-filter: blur(10px);
     text-align: center;
-}
-
-.certificates-container h1 {
-    font-size: 50px;
-    color: #14025f;
-    margin-bottom: 40px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
 .certificate-card {
@@ -407,11 +345,6 @@ body{
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin-bottom: 35px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.certificate-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 .certificate-card h2 {
@@ -435,14 +368,8 @@ body{
     transition: transform 0.3s ease;
 }
 
-.certificate-image:hover {
-    transform: scale(1.02);
-}
-
-/* ------------------------- MEDIA QUERIES FOR MOBILE ------------------------- */
-
+/* ------------------- MEDIA QUERIES ------------------- */
 @media (max-width: 900px) {
-    /* Hero section */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -451,7 +378,7 @@ body{
         max-width: 90%;
     }
     .floating-image {
-        width: 250px;
+        max-width: 250px;
         margin-top: 20px;
     }
     .floating-text {
@@ -461,64 +388,21 @@ body{
         font-size: 40px;
     }
 
-    /* Contact Page */
-    .contact-container {
-        padding: 30px 20px;
-    }
-    .contact-container h1 {
+    h1 {
         font-size: 36px;
     }
-    .contact-link {
-        font-size: 18px;
-    }
-    .phone {
-        font-size: 16px;
-    }
-
-    /* About Page */
-    .about-container {
-        padding: 30px 20px;
-    }
-    .about-container h1 {
-        font-size: 36px;
-    }
-    .about-container p {
-        font-size: 16px;
-    }
-    .about-link {
-        font-size: 16px;
-    }
-
-    /* Projects Page */
-    .projects-container {
-        padding: 30px 20px;
-    }
-    .project-card h2 {
+    h2 {
         font-size: 22px;
     }
-    .project-card p, .project-steps li, .results-table, .insights ul {
-        font-size: 16px;
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    /* Experience Page */
-    .experience-title {
-        font-size: 36px;
-    }
-    .experience-card p, .experience-card ul {
-        font-size: 16px;
-    }
-
-    /* Certificates Page */
-    .certificates-container {
-        padding: 30px 20px;
-    }
-    .certificates-container h1 {
-        font-size: 36px;
-    }
-    .certificate-card h2 {
-        font-size: 22px;
-    }
-    .certificate-card p {
-        font-size: 16px;
+    .contact-container, .about-container, .projects-container, .certificates-container, .experience-container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
+
