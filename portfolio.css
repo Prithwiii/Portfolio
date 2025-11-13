@@ -405,26 +405,76 @@ body{
         padding-right: 15px;
     }
 }
-/* ------------------- NAVBAR STYLING ------------------- */
+/* ------------------- NAVBAR / BUTTONS ------------------- */
 .button-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    flex-wrap: wrap; /* allows buttons to wrap on small screens */
-    padding: 15px;
+    flex-wrap: wrap; /* allows buttons to wrap on smaller screens */
+    padding: 15px 25px;
     box-sizing: border-box;
 }
 
-/* Make buttons fully responsive */
+/* Buttons general style */
 .button-container button {
-    padding: 10px 15px;
-    font-size: 16px;
-    min-width: 120px;
+    padding: 10px 20px;
+    font-size: 18px;
+    min-width: 140px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-/* ------------------- HERO SECTION RESPONSIVE ------------------- */
-@media (max-width: 900px) {
+/* Example hover effect (keep your existing if you have) */
+.button-container button:hover {
+    background-color: #3a0fba;
+    color: white;
+}
+
+/* ------------------- HERO SECTION ------------------- */
+.hero {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+.text-container {
+    max-width: 60%;
+    z-index: 2;
+}
+
+.floating-text {
+    font-size: 100px;
+    font-weight: bold;
+    color: #14025f;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.floating-text1 {
+    font-size: 80px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.floating-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    z-index: 1;
+    border-radius: 20px;
+}
+
+/* ------------------- RESPONSIVE STYLES ------------------- */
+@media (max-width: 768px) {
+    /* Hero section stacks vertically */
     .hero {
         flex-direction: column;
         text-align: center;
@@ -449,7 +499,7 @@ body{
         font-size: 40px;
     }
 
-    /* Buttons stack vertically on smaller screens */
+    /* Buttons stack vertically */
     .button-container {
         flex-direction: column;
         gap: 15px;
@@ -458,11 +508,12 @@ body{
     .button-container button {
         width: 100%;
         max-width: 250px;
+        font-size: 16px;
     }
 }
 
-/* ------------------- GENERAL FIX ------------------- */
+/* Prevent horizontal scrolling anywhere */
 body {
-    overflow-x: hidden; /* prevent horizontal scroll */
+    overflow-x: hidden;
 }
 
